@@ -21,6 +21,13 @@ data(gapminder_unfiltered)
 ```
 
 ```{r}
+#see how data looks like
+gapminder_unfiltered %>% 
+  head()
+```
+
+```{r}
+
 gapminder_unfiltered %>% 
   group_by(year)%>% 
   filter(lifeExp == max(lifeExp)) %>%
